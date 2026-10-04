@@ -359,7 +359,7 @@ public class MainActivity extends Activity {
         return root;
     }
 
-    private TextView sectionTitle(String title, String subtitle) {
+    private LinearLayout sectionTitle(String title, String subtitle) {
         LinearLayout block = new LinearLayout(this);
         block.setOrientation(LinearLayout.VERTICAL);
         block.setPadding(dp(18), dp(16), dp(18), dp(16));
