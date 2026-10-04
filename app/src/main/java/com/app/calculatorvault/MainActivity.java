@@ -411,7 +411,7 @@ public class MainActivity extends Activity {
         Space sp = new Space(this);
         root.addView(sp, new LinearLayout.LayoutParams(1, dp(12)));
 
-        Button manage = actionButton("ניהול הסתרת אפליקציות", ACCENT, v -> showAppHider());
+        Button manage = actionButton(\"ניהול הסתרת אפליקציות\", ACCENT, v -> showAppHider());
         root.addView(manage, new LinearLayout.LayoutParams(-1, dp(54)));
 
         Space sp2 = new Space(this);
@@ -441,7 +441,7 @@ public class MainActivity extends Activity {
         root.addView(header);
 
         TextView info = label(
-                "לחיצה על "הסתר" מסירה את האפליקציה מהמסך הראשי של CalculatorVault. "
+                "לחיצה על \"הסתר\" מסירה את האפליקציה מהמסך הראשי של CalculatorVault. "
                         + "אפליקציה מוסתרת לא נמחקת מהמכשיר.",
                 13, MUTED, Gravity.LEFT);
         info.setTypeface(Typeface.DEFAULT);
@@ -487,7 +487,7 @@ public class MainActivity extends Activity {
                 hiddenCount++;
             }
 
-            Button hide = actionButton(isHidden ? "הצג" : "הסתר",
+            Button hide = actionButton(isHidden ? "הצג" : \"הסתר\",
                     isHidden ? SURFACE_2 : ACCENT,
                     v -> {
                         setHidden(pkg, !getHiddenPackages().contains(pkg));
@@ -614,7 +614,7 @@ public class MainActivity extends Activity {
 
         if (shown == 0) {
             TextView empty = label(
-                    "אין כרגע אפליקציות להצגה.\nפתח "ניהול הסתרת אפליקציות" כדי לנהל את הרשימה.",
+                    "אין כרגע אפליקציות להצגה.\nפתח \"ניהול הסתרת אפליקציות\" כדי לנהל את הרשימה.",
                     15, MUTED, Gravity.CENTER);
             empty.setTypeface(Typeface.DEFAULT);
             empty.setGravity(Gravity.CENTER);
@@ -624,7 +624,7 @@ public class MainActivity extends Activity {
         scroll.addView(list);
         root.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1f));
 
-        Button settings = actionButton("ניהול הסתרת אפליקציות", SURFACE_2, v -> showAppHider());
+        Button settings = actionButton(\"ניהול הסתרת אפליקציות\", SURFACE_2, v -> showAppHider());
         root.addView(settings, new LinearLayout.LayoutParams(-1, dp(52)));
 
         setContentView(root);
